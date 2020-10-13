@@ -1,0 +1,164 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* need to add img in background */
+.header {
+    padding: 30px;
+    background-color: #034f75;
+    color: violet;
+}
+.header h1 {
+    display: inline-block;
+    font-size: 48px;
+    color: goldenrod;
+}
+.header div {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-size: 20px;
+}
+.header div ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+.header a{
+    color: gold;
+}
+body{
+    background-color: peachpuff;
+}
+ p {
+    color:cyan;
+}
+
+.background{
+    height: 800px;
+    width: 100%;
+    margin-bottom: 50px;
+    background-image: url("../css/images/DandDtwo.jfif");
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+.About-Me {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    color: magenta;
+    }
+.About-Me h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+.About-Me img{
+    width: 200px;
+    height: 150px;
+}
+
+.Work {
+    margin: 0;
+    padding: 50px;
+    height: auto;
+       color: magenta;
+       padding: 20px;
+       text-align: left;
+}
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    font-size: 35px;
+    background-color: aquamarine;
+    opacity: 0.5;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-template-rows: repeat(9,1fr);
+    gap:40px;
+    grid-auto-flow: dense;
+    height: auto;
+}
+.grid-item:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+.item-1{
+grid-column: 1/ span 5;
+grid-row: 1/ span 7;
+background-image: url("../css/images/Run-Buddy.png");
+height: 100%;
+width: 100%;
+}
+.item-2{
+    grid-row: 1/ span 4;
+    grid-column: 6/ span 3;
+    background-image: url("../css/images/calculator.jfif");
+}
+.item-3{
+    grid-column: 9/ span 3;
+    grid-row: 1/ span 4;
+    background-image: url("../css/images/web-internet.jfif");
+}
+.item-4{
+    grid-column: 1/ span 3;
+    grid-row: 7/ span 4;
+    background-image: url("./images/led-world.png");
+}
+.item-5{
+    grid-column: 4/ span 3;
+    grid-row: 7/ span 4;
+    background-image: url("../css/images/games.jfif");
+}
+.p{
+    text-align: left;
+}
+
+.Work h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+.Contact-me {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+   background-color: #034f75;
+    color: magenta;
+}
+.Contact-me h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+@media screen and (max-width: 700px) {
+    *{
+        background-color: transparent;
+    }
+    body {
+        background-color: black;
+    }
+    h2 {
+        color: teal;
+        text-decoration-style: wavy;
+    }
+    p {
+        color: rgb(255, 14, 14)
+    }
+    .header h1{
+        color: lime;
+    }
+    .header a{
+        color: lime;
+    }
+}
