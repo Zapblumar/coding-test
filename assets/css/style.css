@@ -1,20 +1,11 @@
-#bootcamp img:not(.equation_image):not(.homepage_image) {
-    border: 2px solid var(--light-gray);
-    padding: 15px;
-    border-radius: 5px;
-    max-width: 90% !important;
-    margin: 50px auto;
-    display: block;
+.header {
+  text-align: center;
+  display: inline-block;
 }
-body {
-    font-size: 16px;
-    font-size: 1rem;
-    font-weight: normal;
-    line-height: 1.5;
-    color: var(--ic-brand-font-color-dark);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+.il ul{
+text-emphasis-style: bold;
 }
+
 .btn {
     border: none;
     background-color: hsl(360, 91%, 36%);
