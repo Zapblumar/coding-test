@@ -1,19 +1,18 @@
 
-
-
-
 var startBtn = document.querySelector("#start");
 var quiz = document.querySelector("main");
 var score = document.querySelector("#high-score");
 var timeLimit = document.getElementById("countdown");
 var correct = document.querySelector("answer")
 var timeLeft = 30;
-
+var end = document.querySelector("#feedback");
+var timeInterval
+var intials
 
 
 function countdown() {
 
-  var timeInterval = setInterval(function () {
+  timeInterval = setInterval(function () {
     if (timeLeft > -1) {
       timeLimit.textContent = timeLeft + "seconds remaining";
       timeLeft--;
@@ -234,31 +233,51 @@ var start = function () {
     var feedback = document.querySelector("#feedback")
     function correctAnswer() {
       feedback.textContent = "correct";
-      window.clearInterval();
+      window.clearInterval(timeInterval);
       timeSavecal();
+      finish()
     }
 
     function wrongAnswer() {
       feedback.textContent = "wrong";
       timeLeft -= 5;
-      window.clearInterval();
+      window.clearInterval(timeInterval);
       timeSavecal();
+      finish()
     }
   }
-  // function timeSavecal(){
-  //   localStorage.setItem("high-score", timeleft);
-  // }
+  function finish() {
+    quiz.innerHTML = "";
+    end.innerHTML = "";
+    var initials = document.createElement("input");
+
+    quiz.appendChild(initials);
+    var submit = document.createElement("button");
+    submit.textContent = "submit";
+    submit.addEventListener("click", function () {
+      var userinput = initials.value;
+      if (userinput === "") {
+        return;
+      }
+      localStorage.setItem("high-score", userinput);
+
+    })
+    quiz.appendChild(submit);
+    submit.onclick = initialSaveCal;
+  }
 };
 
 function timeSavecal() {
-  localStorage.setItem("high-score", timeLeft);
+
+  localStorage.setItem("high", timeLeft);
 }
 
 
 
 function renderLastRegistered() {
   var score = document.querySelector("#high-score")
-  score.textContent = localStorage.getItem('high-score');
+  score.textContent = localStorage.getItem('high-score') || "";
+  score.textContent += localStorage.getItem("high") || "";
 }
 
 
@@ -276,3 +295,4 @@ var questions = [
   { question: "what race is immune to sleep spells?", answerA: "drow", answerB: "dwarf", answerC: "orc", answerD: "halfling" },
   { question: "what level do you get a new feat?", answerA: "2", answerB: "4", answerC: "6", answerD: "8" },
 ];
+
