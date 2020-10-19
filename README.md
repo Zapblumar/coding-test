@@ -3,8 +3,8 @@
 
 ## Getting Started
 
-My Pasword Gen -
-https://zapblumar.github.io/password-gen/
+My coding-test
+https://zapblumar.github.io/coding-test/
 
 ### Prerequisites
 
@@ -41,4 +41,4 @@ I made sure that all the questions showed up and the timer stopped at the end of
 
 * 
 
-<img src=".PNG" />
+<img src="./assest/images/DnD-quiz />
